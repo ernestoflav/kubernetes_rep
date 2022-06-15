@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cnt-service
+spec:
+  selector:
+    app: cnt-app
+  type: LoadBalancer ##clusterIP, NodePort
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
